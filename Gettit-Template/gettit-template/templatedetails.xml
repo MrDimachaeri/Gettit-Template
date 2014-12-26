@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd"> 
+<!-- MUSS Seit Joomla 1.6 ist der Installer universell. Also wichtig, version="2.5" type="template" client="site" angeben -->
+<extension
+    version="3.0"
+    type="template"
+    client="site"> 
+  <!-- SOLLTE, Der Annzeige-Name in Joomla -->
+  <name>test_template</name>
+  <title>test_template</title>
+  <!--SOLLTE Erstellungsdatum -->
+  <creationDate>11.04.13</creationDate>
+  <!-- SOLLTE, Wer ist der Urheber -->
+  <author>Joomla-Templates</author>
+  <!-- SOLLTE, für ausgelieferte Templates immer eine Kontakt-E-Mail-Adressse -->
+  <authorEmail>info(at)joomla-templates.de</authorEmail>
+  <!-- SOLLTE, klar, die Webseite gehört dazu -->
+  <authorUrl>http://www.joomla-templates.de</authorUrl>
+  <!-- SOLLTE, die eigene Versionsnummer des Templates -->
+  <version>1.0.0</version>
+  <!-- SOLLTE, Die Template-Beschreibung wird hier als Joomla language mit einem Platzhalter versehen. In diesem Template-Ordner befindet sich die Sprachdatei in der TPL_TEST_TEMPLATE_XML_DESCRIPTION hinterlegt ist -->
+  <description>TPL_TEST_TEMPLATE_XML_DESCRIPTION</description>
+  <!-- MUSS, der Files-Tag bezeichnet den Block mit den Dateien und Ordnern die mit installiert werden -->
+  <files> 
+    <!-- Der Folder-Tag weist Joomla an, den Ordner bspw. html samt dem Inhalt im Template-Ordner zu Speichern -->
+    <folder>html</folder>
+    <folder>css</folder>
+    <folder>images</folder>
+    <folder>language</folder>
+    <folder>js</folder>
+    <!-- MUSS, die Hauptdatei für die Ausgabe des Templates -->
+    <filename>index.php</filename>
+    <!-- MUSS, jeder Ordner in Joomla ist mit einer Dummy-Html ausgestattet, so werden Server Fehlermeldungen verhindert, falls sich doch ein Webseitenbesucher in ein Verzeichnis verirrt -->
+    <filename>index.html</filename>
+    <!-- SOLLTE, das Browser-Tab icon macht sich immer gut -->
+    <filename>favicon.ico</filename>
+    <!-- MUSS, diese Datei muss natürlich mit installiert werden -->
+    <filename>templateDetails.xml</filename>
+    <!--SOLLTE, im Joomla Backend in der Template-Verwaltung wird dieses Bild vom Layout angezeigt. Am besten einen Screenshot der Webseiten Vorlage einfügen oder wenn die Seite fertig ist ein Browser-Screeensho -->
+    <filename>template_thumbnail.png</filename>
+    <!-- SOLLTE, in dieser Datei kann eine individuelle Fehlerseite erstellt werden (404) -->
+    <filename>error.php</filename>
+  </files>
+  <!-- MUSS, das sind letztendlich die Positionen an die die Module geschickt werden-->
+  <positions>
+    <position>neuigkeiten</position>
+    <position>werbepause</position>
+    <!-- <position>ich-kann-später-noch-weitere-positionen-einfügen</position> -->
+  </positions>
+  <!--Sollte, Sollten unterschiedliche Sprachen genutzt werden, ist hier der richtige Platz um diese zu installieren-->
+  <languages folder="language">
+    <language tag="de-DE">de-DE/de-DE.tpl_test_template.sys.ini</language>
+    <language tag="de-DE">de-DE/de-DE.tpl_test_template.ini</language>
+    <language tag="de-DE">en-GB/en-GB.tpl_test_template.sys.ini</language>
+    <language tag="de-DE">en-GB/en-GB.tpl_test_template.ini</language>
+  </languages>
+  <!-- Parameter Block start -->
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+      <field name="unser_header_bild"
+                    type="media"
+                    default=""
+                    label="TPL_TEST_TEMPLATE_FIELD_UNSER_HEADER_BILD_LABEL"
+                    description="TPL_TEST_TEMPLATE_FIELD_UNSER_HEADER_BILD_DESC"
+                    filter="string"
+                    />
+      </fieldset>
+    </fields>
+  </config>
+  <!-- Parameter Block ende -->
+</extension>
